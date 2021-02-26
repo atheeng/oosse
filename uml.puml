@@ -1,0 +1,170 @@
+@startuml
+annotation java.lang.Override
+annotation java.lang.SuppressWarnings
+class com.DaoImpl.UserDaoImpl
+class com.dashboard.Dashboard
+class com.db.DataBaseConnection
+class com.dto.UserModelTable
+class com.model.User
+class com.utils.ButtonEditor
+class com.utils.ButtonRenderer
+class com.utils.TableWithButtonDemo
+class java.awt.Color
+class java.awt.Component
+class java.awt.EventQueue
+class java.awt.event.ActionEvent
+class java.awt.event.ActionListener
+class java.sql.Connection
+class java.sql.DriverManager
+class java.sql.PreparedStatement
+class java.sql.ResultSet
+class java.sql.SQLException
+class java.sql.Statement
+class java.util.ArrayList
+class java.util.List
+class javax.swing.DefaultCellEditor
+class javax.swing.JButton
+class javax.swing.JCheckBox
+class javax.swing.JFrame
+class javax.swing.JLabel
+class javax.swing.JOptionPane
+class javax.swing.JPanel
+class javax.swing.JPasswordField
+class javax.swing.JScrollPane
+class javax.swing.JTable
+class javax.swing.JTextField
+class javax.swing.SwingUtilities
+class javax.swing.UIManager
+class javax.swing.table.AbstractTableModel
+class javax.swing.table.DefaultTableModel
+class javax.swing.table.TableModel
+class jdk.nashorn.internal.scripts.JO
+class view.CustomerFrame
+class view.LoginForm
+class view.ProductFrame
+enum com.Enum.RoleType
+interface com.dao.UserDao
+interface javax.swing.table.TableCellRenderer
+com.DaoImpl.UserDaoImpl ..> java.lang.Override
+com.DaoImpl.UserDaoImpl ..> com.db.DataBaseConnection
+com.DaoImpl.UserDaoImpl ..> com.model.User
+com.DaoImpl.UserDaoImpl ..> java.sql.Connection
+com.DaoImpl.UserDaoImpl ..> java.sql.PreparedStatement
+com.DaoImpl.UserDaoImpl ..> java.sql.ResultSet
+com.DaoImpl.UserDaoImpl ..> java.sql.Statement
+com.DaoImpl.UserDaoImpl ..> java.util.ArrayList
+com.DaoImpl.UserDaoImpl ..> java.util.List
+com.DaoImpl.UserDaoImpl ..> javax.swing.table.DefaultTableModel
+com.DaoImpl.UserDaoImpl ..> view.CustomerFrame
+com.DaoImpl.UserDaoImpl ..> com.Enum.RoleType
+com.DaoImpl.UserDaoImpl --|> com.dao.UserDao
+com.dashboard.Dashboard ..> java.lang.SuppressWarnings
+com.dashboard.Dashboard ..> com.DaoImpl.UserDaoImpl
+com.dashboard.Dashboard ..> com.dto.UserModelTable
+com.dashboard.Dashboard ..> com.model.User
+com.dashboard.Dashboard ..> java.util.List
+com.dashboard.Dashboard --|> javax.swing.JFrame
+com.dashboard.Dashboard ..> javax.swing.JOptionPane
+com.dashboard.Dashboard ..> javax.swing.JScrollPane
+com.dashboard.Dashboard ..> javax.swing.JTable
+com.dashboard.Dashboard ..> view.CustomerFrame
+com.dashboard.Dashboard ..> view.LoginForm
+com.dashboard.Dashboard ..> view.ProductFrame
+com.dashboard.Dashboard ..> com.Enum.RoleType
+com.dashboard.Dashboard ..> com.dao.UserDao
+com.db.DataBaseConnection ..> java.sql.Connection
+com.db.DataBaseConnection ..> java.sql.DriverManager
+com.db.DataBaseConnection ..> java.sql.SQLException
+com.dto.UserModelTable ..> java.lang.Override
+com.dto.UserModelTable ..> com.model.User
+com.dto.UserModelTable ..> java.util.ArrayList
+com.dto.UserModelTable ..> java.util.List
+com.dto.UserModelTable --|> javax.swing.table.AbstractTableModel
+com.model.User ..> com.Enum.RoleType
+com.utils.ButtonEditor ..> java.lang.Override
+com.utils.ButtonEditor ..> java.awt.Component
+com.utils.ButtonEditor ..> java.awt.event.ActionEvent
+com.utils.ButtonEditor ..> java.awt.event.ActionListener
+com.utils.ButtonEditor --|> javax.swing.DefaultCellEditor
+com.utils.ButtonEditor ..> javax.swing.JButton
+com.utils.ButtonEditor ..> javax.swing.JCheckBox
+com.utils.ButtonEditor ..> javax.swing.JOptionPane
+com.utils.ButtonEditor ..> javax.swing.JTable
+com.utils.ButtonRenderer ..> java.lang.Override
+com.utils.ButtonRenderer ..> java.awt.Component
+com.utils.ButtonRenderer ..> java.awt.event.ActionEvent
+com.utils.ButtonRenderer ..> java.awt.event.ActionListener
+com.utils.ButtonRenderer ..> javax.swing.DefaultCellEditor
+com.utils.ButtonRenderer --|> javax.swing.JButton
+com.utils.ButtonRenderer ..> javax.swing.JCheckBox
+com.utils.ButtonRenderer ..> javax.swing.JFrame
+com.utils.ButtonRenderer ..> javax.swing.JOptionPane
+com.utils.ButtonRenderer ..> javax.swing.JScrollPane
+com.utils.ButtonRenderer ..> javax.swing.JTable
+com.utils.ButtonRenderer ..> javax.swing.SwingUtilities
+com.utils.ButtonRenderer ..> javax.swing.UIManager
+com.utils.ButtonRenderer ..> javax.swing.table.DefaultTableModel
+com.utils.ButtonRenderer --|> javax.swing.table.TableCellRenderer
+com.utils.TableWithButtonDemo ..> com.DaoImpl.UserDaoImpl
+com.utils.TableWithButtonDemo ..> com.model.User
+com.utils.TableWithButtonDemo ..> java.awt.Color
+com.utils.TableWithButtonDemo ..> java.awt.Component
+com.utils.TableWithButtonDemo ..> java.awt.EventQueue
+com.utils.TableWithButtonDemo ..> java.awt.event.ActionEvent
+com.utils.TableWithButtonDemo ..> java.awt.event.ActionListener
+com.utils.TableWithButtonDemo ..> java.util.List
+com.utils.TableWithButtonDemo ..> javax.swing.DefaultCellEditor
+com.utils.TableWithButtonDemo ..> javax.swing.JButton
+com.utils.TableWithButtonDemo ..> javax.swing.JCheckBox
+com.utils.TableWithButtonDemo ..> javax.swing.JFrame
+com.utils.TableWithButtonDemo ..> javax.swing.JOptionPane
+com.utils.TableWithButtonDemo ..> javax.swing.JScrollPane
+com.utils.TableWithButtonDemo ..> javax.swing.JTable
+com.utils.TableWithButtonDemo ..> javax.swing.UIManager
+com.utils.TableWithButtonDemo ..> javax.swing.table.DefaultTableModel
+com.utils.TableWithButtonDemo ..> javax.swing.table.TableModel
+com.utils.TableWithButtonDemo ..> com.dao.UserDao
+com.utils.TableWithButtonDemo ..> javax.swing.table.TableCellRenderer
+view.CustomerFrame ..> java.lang.SuppressWarnings
+view.CustomerFrame ..> com.DaoImpl.UserDaoImpl
+view.CustomerFrame ..> com.dashboard.Dashboard
+view.CustomerFrame ..> com.db.DataBaseConnection
+view.CustomerFrame ..> com.dto.UserModelTable
+view.CustomerFrame ..> com.model.User
+view.CustomerFrame ..> com.utils.ButtonEditor
+view.CustomerFrame ..> com.utils.ButtonRenderer
+view.CustomerFrame ..> com.utils.TableWithButtonDemo
+view.CustomerFrame ..> java.sql.Connection
+view.CustomerFrame ..> java.sql.PreparedStatement
+view.CustomerFrame ..> java.sql.ResultSet
+view.CustomerFrame ..> java.sql.SQLException
+view.CustomerFrame ..> java.sql.Statement
+view.CustomerFrame ..> java.util.List
+view.CustomerFrame ..> javax.swing.JButton
+view.CustomerFrame ..> javax.swing.JCheckBox
+view.CustomerFrame --|> javax.swing.JFrame
+view.CustomerFrame ..> javax.swing.JLabel
+view.CustomerFrame ..> javax.swing.JOptionPane
+view.CustomerFrame ..> javax.swing.JPanel
+view.CustomerFrame ..> javax.swing.JPasswordField
+view.CustomerFrame ..> javax.swing.JScrollPane
+view.CustomerFrame ..> javax.swing.JTable
+view.CustomerFrame ..> javax.swing.JTextField
+view.CustomerFrame ..> javax.swing.table.DefaultTableModel
+view.CustomerFrame ..> com.Enum.RoleType
+view.CustomerFrame ..> com.dao.UserDao
+view.LoginForm ..> java.lang.SuppressWarnings
+view.LoginForm ..> com.DaoImpl.UserDaoImpl
+view.LoginForm ..> com.dashboard.Dashboard
+view.LoginForm ..> com.model.User
+view.LoginForm --|> javax.swing.JFrame
+view.LoginForm ..> javax.swing.JOptionPane
+view.LoginForm ..> jdk.nashorn.internal.scripts.JO
+view.LoginForm ..> com.dao.UserDao
+view.ProductFrame ..> java.lang.SuppressWarnings
+view.ProductFrame ..> com.dashboard.Dashboard
+view.ProductFrame ..> com.model.User
+view.ProductFrame --|> javax.swing.JFrame
+com.dao.UserDao ..> com.model.User
+com.dao.UserDao ..> java.util.List
+@enduml
